@@ -18,15 +18,16 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
-  region  = "us-west-2"
+  region  = "eu-north-1"
+
 }
 
 
 #Resource to be created
 
 resource "aws_instance" "app_server" {
-  ami           = "ami-830c94e3"
-  instance_type = "t2.micro"
+  ami           = "ami-0989fb15ce71ba39e"
+  instance_type = "t3.micro"
 
   tags = {
     Name = "BB-server with Terraform"

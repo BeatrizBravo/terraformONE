@@ -60,10 +60,37 @@ sudo apt update && sudo apt upgrade -y
 
 4. Check your version
 ```bash
- wsl -l -v
+ aws --version
 ```
-aws --version
+5. Connect aws cli with your aws
+
+Go to your IAM user aws account  --> profile email --> My security credentials --> Access keys --> create Access key  --> select -->  Command Line Interface (CLI) --> next
 <br>
+Copy:
+- Access key
+- Secret access Key
+
+6. Open powershell and type :
+
+
+```bash
+wsl
+```
+7. Configure aws cli :  
+
+```bash
+aws configure
+```
+<br>
+Example
+
+```bash
+AWS Access Key ID [None]: Write-your-Access-key
+AWS Secret Access Key [None]: wWrite-your-Secret-access-Key
+Default region name [None]: us-west-2  (check  your region to choose)
+Default output format [None]: json
+```
+
 
 ## Terraform
 
@@ -149,4 +176,8 @@ wsl
 
 ```
 
-5. Go aws services --> EC2 Dashboard  --> Instances(running).
+5. Check your work:
+```bash
+ Go aws services --> EC2 Dashboard  --> Instances(running).
+
+```

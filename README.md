@@ -87,7 +87,7 @@ Example
 ```bash
 AWS Access Key ID [None]: Write-your-Access-key
 AWS Secret Access Key [None]: wWrite-your-Secret-access-Key
-Default region name [None]: us-west-2  (check  your region to choose)
+Default region name [None]: eu-north-1  (check  your region to choose)
 Default output format [None]: json
 ```
 
@@ -175,7 +175,13 @@ wsl
  terraform apply
 
 ```
+The console will ask you => 
+<br>
+Enter a value:
+```bash
+yes
 
+```
 5. Check your work:
 ```bash
  Go aws services --> EC2 Dashboard  --> Instances(running).

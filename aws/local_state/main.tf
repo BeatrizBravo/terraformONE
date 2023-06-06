@@ -31,7 +31,7 @@ resource "aws_instance" "app_server" {
   key_name = "bb-key"
 
   tags = {
-    Name = "Hoisin Duch Wrap Terraform"
+    Name = "Hoisin Duch Wrap Terraform 2.0"
   }
 
 

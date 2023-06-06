@@ -43,7 +43,7 @@ wsl
 
 2.  Update your system
 <br>
-(It is going be asking you for permissions, the password you set up before.)
+(It is going be asking you for permissions, use the password you set up before.)
 <br>
 
    ```bash
@@ -64,11 +64,30 @@ sudo apt update && sudo apt upgrade -y
 ```
 5. Connect aws cli with your aws
 
-Go to your IAM user aws account  --> profile email --> My security credentials --> Access keys --> create Access key  --> select -->  Command Line Interface (CLI) --> next
+Go to the browser and access to your IAM user aws account  --> 
+<br>
+See the top right where is your profile email --> 
+<br>
+click on -->
+<br>
+My security credentials --> 
+<br>
+roll down to see the option Access key 
+<br>
+Access keys --> create Access key 
+<br> 
+--> select --> 
+<br> 
+Command Line Interface (CLI) --> 
+<br>
+next
 <br>
 Copy:
 - Access key
 - Secret access Key
+
+<br>
+<br>
 
 6. Open powershell and type :
 
@@ -118,24 +137,24 @@ curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 
 ```
 5. Add the HashiCorp apt repository to your system's list of sources:
+
 ```bash
 sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 
 ```
 
 6. Run
-```bash
+```
+
 sudo apt update
  
 ```
 
 7. Finally, install Terraform by running:
-```bash
 
-8. Run
-
-```bash
+```
 sudo apt install wget unzip 
+
 ```
 
 
@@ -148,7 +167,7 @@ sudo apt install wget unzip
 <br>
 
 
-[more info ](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+[If terraform is not working follow this link ](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) and watch the video on the minute 5:55 to install Terraform in Linux, throw wsl.
 
 # Execute terraform
 1. Open powershell and type :

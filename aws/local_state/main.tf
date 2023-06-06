@@ -28,9 +28,10 @@ provider "aws" {
 resource "aws_instance" "app_server" {
   ami           = "ami-0989fb15ce71ba39e"
   instance_type = "t3.micro"
+  key_name = "bb-key"
 
   tags = {
-    Name = "BB-server with Terraform"
+    Name = "Hoisin Duch Wrap Terraform 2.0 "
   }
 
 

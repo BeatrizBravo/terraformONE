@@ -131,13 +131,15 @@ sudo apt update
 
 7. Finally, install Terraform by running:
 ```bash
-3. Run
+
+8. Run
+
 ```bash
 sudo apt install wget unzip 
 ```
 
 
-8. Check your version
+9. Check your version
 ```bash
  terraform version
 

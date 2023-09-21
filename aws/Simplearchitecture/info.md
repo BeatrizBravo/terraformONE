@@ -34,7 +34,22 @@ check again the configuration list
 
 # Creating an empty  EC2 instance
 
-<script src="https://gist.github.com/Bea-testing/87b44806b347d6bf24070b4dd5284fc2.js"></script>
+```terraform
+provider "aws" {
+  region = "eu-west-2"
+}
+
+resource "aws_instance" "example" {
+  ami           = "ami-0eb260c4d5475b901"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "EC2Ubuntu"
+  }
+}
+```
+
+
 
 # Run the project
 - Open the console
@@ -49,7 +64,7 @@ terraform apply
 ```shell
 terraform apply
 ```
-(ou have to accept terraform apply)
+(you ou have to accept terraform apply)
 ![apply output](images/apply.PNG)
 <br><br>
 - go to the aws console on the browser and check EC2 instances

@@ -4,7 +4,7 @@ The objective of this "simple architecture" project is to create a virtual machi
 - subnet -default
 - availability zone - eu-west-2 (London)
 - resource name - EC2Ubuntu
-![aws result](./simpleArchitecture.PNG)
+![aws result](images/simpleArchitecture.PNG)
 
 # Requirements:
 - AWS account
@@ -32,6 +32,25 @@ aws configure
 
 check again the configuration list
 
+# Creating an empty  EC2 instance
+
+```terraform
+provider "aws" {
+  region = "eu-west-2"
+}
+
+resource "aws_instance" "example" {
+  ami           = "ami-0eb260c4d5475b901"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "EC2Ubuntu"
+  }
+}
+```
+
+
+
 # Run the project
 - Open the console
 - go to the folder where you have store the main.tf file
@@ -45,6 +64,8 @@ terraform apply
 ```shell
 terraform apply
 ```
-(ou have to accept terraform apply)
+(you ou have to accept terraform apply)
+![apply output](images/apply.PNG)
 <br><br>
 - go to the aws console on the browser and check EC2 instances
+

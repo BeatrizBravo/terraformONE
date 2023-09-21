@@ -3,11 +3,11 @@ The objective of this "simple architecture" project is to create a virtual machi
 - VPC -default
 - subnet -default
 - availability zone - eu-west-2 (London)
-- resourece name - EC2Ubuntu
+- resource name - EC2Ubuntu
 
 # Requirements:
 - AWS account
 - user with appropriate permissions.
 - Access key id and secret access Key.
 
-![aws result](./simpleArchitecture.png)
+![aws result](./simpleArchitecture.PNG)

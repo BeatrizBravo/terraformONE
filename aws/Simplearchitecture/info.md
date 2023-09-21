@@ -4,7 +4,7 @@ The objective of this "simple architecture" project is to create a virtual machi
 - subnet -default
 - availability zone - eu-west-2 (London)
 - resource name - EC2Ubuntu
-![aws result](./simpleArchitecture.PNG)
+![aws result](images/simpleArchitecture.PNG)
 
 # Requirements:
 - AWS account
@@ -46,5 +46,7 @@ terraform apply
 terraform apply
 ```
 (ou have to accept terraform apply)
+![apply output](images/apply.png)
 <br><br>
 - go to the aws console on the browser and check EC2 instances
+

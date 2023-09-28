@@ -1,5 +1,5 @@
 # Introduction
-This project is going to create a virtual machine in AWS, using terraform.
+[This project](https://github.com/BeatrizBravo/terraformONE/tree/securityGroup/aws/intro-readme) is going to create an instance in AWS, using terraform.
 # Infrastructure as Code
 Manage infrastructure in a programmable way.<br>
 Before you  used to have a clear distinction between software and hardware. <br>
@@ -112,6 +112,45 @@ Default output format [None]: json
 
 
 ## Terraform
+
+### The code
+```terraform
+#create AWS EC2 Instance
+terraform {
+
+# provider details=> console=>  terraform init
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.16"
+    }
+  }
+
+  required_version = ">= 1.2.0"
+}
+
+# Configure the AWS Provider
+provider "aws" {
+  region  = "eu-north-1"
+
+}
+
+
+#Resource to be created
+resource "aws_instance" "app_server" {
+  ami           = "ami-0989fb15ce71ba39e"
+  instance_type = "t3.micro"
+  key_name = "bb-key"
+
+  tags = {
+    Name = "Hoisin Duch Wrap Terraform 2.0"
+  }
+
+
+}
+```
+
+### Execute Terraform
 
 1. Open powershell and type :
 

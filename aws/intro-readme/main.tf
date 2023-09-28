@@ -1,6 +1,4 @@
 #create AWS EC2 Instance
-
-
 terraform {
 
 # provider details=> console=>  terraform init
@@ -14,8 +12,6 @@ terraform {
   required_version = ">= 1.2.0"
 }
 
-
-
 # Configure the AWS Provider
 provider "aws" {
   region  = "eu-north-1"
@@ -24,7 +20,6 @@ provider "aws" {
 
 
 #Resource to be created
-
 resource "aws_instance" "app_server" {
   ami           = "ami-0989fb15ce71ba39e"
   instance_type = "t3.micro"

@@ -1,5 +1,12 @@
 # Objetive
-The objective of this "simple architecture" project is to create a virtual machine that will have a simple architecture where it:
+The objective of this "simple architecture" project is to create ONE instance (virtual machine).
+
+![](https://d2908q01vomqb2.cloudfront.net/77de68daecd823babbb58edb1c8e14d7106e83bb/2021/06/15/VPC-Network-Engineers-Part-1-1.png)
+
+[VPC](https://aws.amazon.com/blogs/apn/amazon-vpc-for-on-premises-network-engineers-part-one/)
+
+
+This project will have a simple architecture:
 - VPC -default
 - subnet -default
 - availability zone - eu-west-2 (London)

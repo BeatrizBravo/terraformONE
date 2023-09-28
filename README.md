@@ -1,3 +1,17 @@
+<!-- TOC -->
+* [Introduction](#introduction)
+* [Infrastructure as Code](#infrastructure-as-code)
+* [Terraform](#terraform)
+* [Installation for a Windows machine](#installation-for-a-windows-machine)
+  * [Wsl](#wsl)
+    * [How to use ubuntu in window](#how-to-use-ubuntu-in-window)
+  * [AWS cli](#aws-cli)
+  * [Terraform](#terraform-1)
+    * [Install Terraform](#install-terraform)
+    * [The code](#the-code)
+* [Execute terraform](#execute-terraform)
+<!-- TOC -->
+
 # Introduction
 [This project](https://github.com/BeatrizBravo/terraformONE/tree/securityGroup/aws/intro-readme) is going to create an instance in AWS, using terraform.
 # Infrastructure as Code
@@ -62,32 +76,20 @@ sudo apt update && sudo apt upgrade -y
 ```bash
  aws --version
 ```
-5. Connect aws cli with your aws
+5. Connect aws cli with your aws:
+   - Go to the AWS Management Console website (https://console.aws.amazon.com/) and sign in using your AWS account credentials.
+   - Open the IAM service: Once you are signed in, search for "IAM" in the AWS Management Console search bar and select the "IAM" service from the results.
+   - click on "Users" in the navigation pane on the left side of the screen. This will take you to the "Users" page where you can manage your IAM users.
+   - Another option is go the top right where is your profile email
+   - click on "My security credentials". 
+   - Roll down to see the option Access key
+   - click on "Access keys" and "create Access key"
+   - select --> Command Line Interface (CLI)
+   - click on "next"
+   - Copy:
+        - Access key
+        - Secret access Key
 
-Go to the browser and access to your IAM user aws account  --> 
-<br>
-See the top right where is your profile email --> 
-<br>
-click on -->
-<br>
-My security credentials --> 
-<br>
-roll down to see the option Access key 
-<br>
-Access keys --> create Access key 
-<br> 
---> select --> 
-<br> 
-Command Line Interface (CLI) --> 
-<br>
-next
-<br>
-Copy:
-- Access key
-- Secret access Key
-
-<br>
-<br>
 
 6. Open powershell and type :
 
@@ -113,44 +115,7 @@ Default output format [None]: json
 
 ## Terraform
 
-### The code
-```terraform
-#create AWS EC2 Instance
-terraform {
-
-# provider details=> console=>  terraform init
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.16"
-    }
-  }
-
-  required_version = ">= 1.2.0"
-}
-
-# Configure the AWS Provider
-provider "aws" {
-  region  = "eu-north-1"
-
-}
-
-
-#Resource to be created
-resource "aws_instance" "app_server" {
-  ami           = "ami-0989fb15ce71ba39e"
-  instance_type = "t3.micro"
-  key_name = "bb-key"
-
-  tags = {
-    Name = "Hoisin Duch Wrap Terraform 2.0"
-  }
-
-
-}
-```
-
-### Execute Terraform
+### Install Terraform
 
 1. Open powershell and type :
 
@@ -207,6 +172,43 @@ sudo apt install wget unzip
 
 
 [If terraform is not working follow this link ](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) and watch the video on the minute 5:55 to install Terraform in Linux, throw wsl.
+
+### The code
+```terraform
+#create AWS EC2 Instance
+terraform {
+
+# provider details=> console=>  terraform init
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.16"
+    }
+  }
+
+  required_version = ">= 1.2.0"
+}
+
+# Configure the AWS Provider
+provider "aws" {
+  region  = "eu-north-1"
+
+}
+
+
+#Resource to be created
+resource "aws_instance" "app_server" {
+  ami           = "ami-0989fb15ce71ba39e"
+  instance_type = "t3.micro"
+  key_name = "bb-key"
+
+  tags = {
+    Name = "Hoisin Duch Wrap Terraform 2.0"
+  }
+
+
+}
+```
 
 # Execute terraform
 1. Open powershell and type :

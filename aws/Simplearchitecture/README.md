@@ -11,8 +11,8 @@ This project will have a simple architecture:
 - subnet -default
 - availability zone - eu-west-2 (London)
 - resource name - EC2Ubuntu
-![aws result](images/simpleArchitecture.PNG)
 
+![AWS Management Console website->EC2](C:\Users\beatriz.bravo-chavez\Documents\Github\devOps\terraformONE\aws\Simplearchitecture\images\EC2-wity-terraform-apply-simpleArquitectura.PNG)
 # Requirements:
 - AWS account
 - user with appropriate permissions.
@@ -71,8 +71,9 @@ terraform apply
 ```shell
 terraform apply
 ```
-(you ou have to accept terraform apply)
-![apply output](images/apply.PNG)
+(you have to accept terraform apply!)
+
+![Terraform output](C:\Users\beatriz.bravo-chavez\Documents\Github\devOps\terraformONE\aws\Simplearchitecture\images\terraform-apply-simpleArquitectura.PNG)
 <br><br>
 - go to the aws console on the browser and check EC2 instances
 
